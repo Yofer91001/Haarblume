@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "node-popup": "^0.1.14",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "promisify": "^0.0.3",
+    "util": "^0.12.4"
+  },
+  "name": "haarblume",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yofer",
+  "license": "ISC",
+  "description": ""
+}
