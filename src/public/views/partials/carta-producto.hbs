@@ -1,0 +1,32 @@
+<div class="carta">
+    <div >
+      <img src="{{producto.imagen}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><strong>{{producto.nombre_producto}}</strong></h5>
+        <p>{{producto.descripcion}}</p>
+        <p><strong>{{producto.precio}}$</strong></p>
+        <form action="/carrito/{{producto.referencia}}">
+        <div class="formulario_producto">
+          
+          
+          <input type="number" min="1" name = "medida"class="form" placeholder="cantidad" style="margin-right: 1rem">
+          <select name="medida" id="medida">
+            <option>{{producto.medida}}ml</option>
+            
+          </select>
+        
+        </div>
+
+
+          <div class="botones_compras">
+          <input type="submit" value="Agregar al carrito" id="agregar_carrito">
+          
+
+          </div>
+         
+        </form>
+      </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,126 @@
+<style>
+    .seccion_navbar:hover{
+        transform: scale(1.1);
+        background-color: #ecc86e;
+        border-radius: 12%;
+        
+    }
+    .seccion_navbar{
+      margin-left: 2rem;
+    }
+    .contenedor_header{
+
+      display: flex;
+      
+      justify-content: center;
+      
+
+    }
+    .barra_logs{
+      background-color: rgb(245, 245, 245);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      -webkit-box-shadow: -1px 17px 17px -16px rgba(0,0,0,0.44);
+-moz-box-shadow: -1px 17px 17px -16px rgba(0,0,0,0.44);
+box-shadow: -1px 17px 17px -16px rgba(0,0,0,0.44);
+      
+
+    }
+    .logs{
+      color: black;
+      padding-left:  5rem;
+      padding-right:  5rem;
+      font-weight: 5  00;
+      
+    }
+    .links{
+      text-decoration: none;
+    }
+    
+
+</style>
+
+
+
+
+
+
+
+{{#if sesion}}
+<div id = "barra_con_sesion" class="barra_logs">
+  <a href="/login" class="links"><p class="logs">{{usuario}}</p></a>
+  <div>
+    <a class="navbar-brand" href="/"><img src="https://i.ibb.co/t3GPwyZ/10.png" alt="Logo" style="max-height:50px; background-color:rgb(245, 245, 245); padding-bottom: 5px;"></a>
+    
+  </div>
+  <form action="/logout" method="post" >
+    <input type="submit" name="logout" id="" value="Cerrar Sesión" class="logs" style="color: rgb(241, 2, 2);border:0; background-color: rgb(245, 245, 245); font-weight: 500; ">
+  </form>
+  
+
+
+</div>
+
+{{else}}
+<div class="barra_logs">
+  <a href="/login" class="links"><p class="logs">Iniciar sesión</p></a>
+  <div>
+    <a class="navbar-brand" href="/"><img src="https://i.ibb.co/t3GPwyZ/10.png" alt="Logo" style="max-height:50px; background-color:rgb(245, 245, 245); padding-bottom: 5px"></a>
+  </div>
+  <a href="/logup" class="links"><p class="logs">Registrarse</p></a>
+
+
+</div>
+
+{{/if}}
+<div class="contenedor_header"> 
+  
+
+    <nav class="navbar navbar-expand-lg navbar-light " >
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown seccion_navbar" >
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" style="color: black" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Productos
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/shampoos">Shampoos</a></li>
+                <li><a class="dropdown-item" href="/tratamientos">Tratamientos</a></li>
+                <li><a class="dropdown-item" href="/alisadores">Alisadores</a></li>
+                <li><a class="dropdown-item" href="/minoxidil">Minoxidil</a></li>
+                <li><a class="dropdown-item" href="/mascarillas">Mascarillas</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/destacados">Destacados</a></li>
+              </ul>
+            </li>
+            <li class="nav-item seccion_navbar" >
+                <a class="nav-link active " aria-current="page" href="/lineas">Lineas</a>
+            </li>
+            
+            <li class="nav-item seccion_navbar">
+              <a class="nav-link" href="/mayoreo" style="color: black">Mayoreo</a>
+            </li>
+            <li class="nav-item seccion_navbar">
+              <a class="nav-link" href="/about" style="color: black">Quienes Somos</a>
+            </li>
+            <li class="nav-item seccion_navbar">
+              <a class="nav-link" href="/blog" style="color: black">Blog</a>
+            </li>
+            <li>
+              <a href=""><i class="fas fa-shopping-bag"></i></a>
+            </li>
+            
+          </ul>
+        
+        </div>
+      </div>
+    </nav>
+  
+</div>
+
+
