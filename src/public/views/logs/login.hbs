@@ -1,0 +1,87 @@
+<style>
+    .contenedor_principal_login{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .contenedor_login{
+        flex-direction: column;
+        text-align: center;
+        border:2px solid #C09E45;
+        border-bottom:1px solid #C09E45;
+        padding: 30px 150px;
+        background-color: rgb(245, 245, 245);
+        -webkit-box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.85);
+-moz-box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.85);
+box-shadow: 0px 0px 21px -10px rgba(0,0,0,0.85);
+    }
+    .iniciar_sesion{
+        
+        background-color: #C09E45;
+        padding: 5px 50px;
+        color: #761A38;
+        font-weight: 600;
+    }
+</style>
+<script>
+    {{#if usuario_no_loggeado}}
+        alert("Correo o contraseña inválidos")
+    {{/if}}
+    
+</script>
+
+
+<hr>
+<div class="contenedor_principal_login">
+    <div class="contenedor_login">
+        <h3 style="color: #761A38; font-weight:bold; padding-top:2rem"> Inicio de Sesión</h3>
+        <form action="/login" method="post">
+            <table style="border-collapse: separate; border-spacing: 10px 30px">
+            
+                <tr>
+
+                <th>
+                    <label for="correo">Correo: </label>
+                </th>
+                <td>
+                    <input type="email" name="correo" placeholder="example@123.com" value="{{correo}}">
+                </td>
+
+                </tr>
+
+
+                <tr>
+
+                <th>
+                    <label for="pass">Constraseña: </label>
+                </th>
+                <td>
+                    <input type="password" name="pass" placeholder="password">
+                </td>
+
+                </tr>
+            
+
+               
+
+            
+
+                
+
+            </table>
+            <dir class="contenedor_principal_login">
+                <input type="submit" value="Iniciar sesión" class="iniciar_sesion">
+            </dir>
+
+            
+
+        </form>
+        
+        
+
+        </div>
+        
+
+        
+    
+</div>
